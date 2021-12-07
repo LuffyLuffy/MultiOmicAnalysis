@@ -127,9 +127,10 @@ sbatch metaWRAP-BinRefinement.slurm $input $output  # Integrating the output fro
  [metaWRAP-ReassembleBins.slurm](slurm_scripts/metaWRAP-ReassembleBins.slurm) 
 
 ```bash
+cleandata="trimmoatic_out"
 input="SI047_bins_refined/metawrap_70_10_bins"
 output="SI047_bins_reassembled"
-sbatch metaWRAP-ReassembleBins.slurm $input $output
+sbatch metaWRAP-ReassembleBins.slurm $input $output $cleandata
 ```
 
 ### Final Bins

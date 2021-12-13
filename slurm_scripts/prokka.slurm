@@ -19,8 +19,8 @@ input_fa=$1
 outdir=$2
 
 bn=`basename $input_fa`
-mkdir $outdir
+#mkdir $outdir ##create outside
 
 module load Prokka/1.13-intel-2016.u3-BioPerl-1.6.924
 
-prokka --outdir $outdir/$bn.out --prefix ${bn%%.*} --rnammer --cpus $cpus --locustag ${bn%%.*} $input
+prokka --outdir $outdir/$bn.out --prefix ${bn%%.*} --rnammer --cpus $cpus --locustag ${bn%%.*} $input_fa

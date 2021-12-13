@@ -138,7 +138,9 @@ sbatch metaWRAP-ReassembleBins.slurm $input $output $cleandata
 ```bash
 mkdir SI047_final_bins
 cp SI047_bins_refined/metawrap_70_10_bins/*fa SI047_final_bins
-cp -rf SI047_bins_reassembled/reassembled_bins/*fa
+#cp -rf SI047_bins_reassembled/reassembled_bins/*fa
+cp -rf SI047_bins_reassembled/reassembled_best_bins/*.fa  SI047_final_bins
+
 ```
 
 ## 6. Bins Annotation
@@ -146,6 +148,7 @@ cp -rf SI047_bins_reassembled/reassembled_bins/*fa
  [prokka.slurm](slurm_scripts/prokka.slurm) 
 
 ```bash
+mkdir SI047_final_bins_prokka
 input="SI047_final_bins"
 output="SI047_final_bins_prokka"
 for fa in $input/*.fa;

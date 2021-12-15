@@ -13,7 +13,9 @@
 module load HMMER/3.2.1-spartan_intel-2017.u2
 
 query=$1
-bn=`basename $query`
+D2=$(dirname "$query")
+bn=$(basename "$D2")
+
 output_dir=$2
 cpus=2
 db=/home/heyu/db/HgcA.hmm

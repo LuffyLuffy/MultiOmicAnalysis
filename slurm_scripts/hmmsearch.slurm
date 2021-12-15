@@ -23,4 +23,4 @@ db=/home/heyu/db/HgcA.hmm
 hmmsearch --tblout $output_dir/$bn.hit.tab -E 1e-5 --cpu $cpus --notextw $db $query > /dev/null
 
 esl-sfetch --index $query
-grep -v "^#" $output_dir/$bn.hit.tab | awk '{print $1}' | esl-sfetch -f $query - > $query.hit.faa
+grep -v "^#" $output_dir/$bn.hit.tab | awk '{print $1}' | esl-sfetch -f $query - > $output_dir/$bn.hit.faa

@@ -230,7 +230,7 @@ python fasta2relaxedphylip.py -i SI047_hgcA.aln.faa -o SI047_hgcA.aln.phy
 
 # Make Tree
 input="SI047_hgcA.aln.phy"
-sbatch mafft-iqtree.slurm $input
+sbatch iqtree.slurm $input
 ```
 
 ## 10. Gene Abundance in metagenomic datasets

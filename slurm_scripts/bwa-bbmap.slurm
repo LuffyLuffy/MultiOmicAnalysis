@@ -22,8 +22,8 @@ index_name=$input_fa.idx
 module load BWA/0.7.17-intel-2016.u3
 module load BBMap/36.62-intel-2016.u3-Java-1.8.0_71
 
-if [ ! -d $OUT_DIR  ]; then
-	mkdir $OUT_DIR
+if [ ! -d $out_dir  ]; then
+	mkdir $out_dir
 fi
 
 bwa index -p $index_name $input_fa
